@@ -1,0 +1,70 @@
+package Exercícios;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class CadastroPessoa {
+	
+	public static void main(String[] args) {
+		
+		ArrayList<String> lista_usuario = new ArrayList<String>();
+		
+		
+		
+	}
+	
+	String pessoa;
+	
+	
+	public static boolean validarNome(String nome_p) {
+		
+			String nome;
+			nome = nome_p.trim();
+			
+			if((nome.length() == 0) || (nome.length() < 3)) {
+				
+				return false;
+				
+			}else {
+				
+				return true;
+			}
+	
+	}
+	
+	public String busca(ArrayList<String> lista, String nome_p) {
+		
+		Iterator i = lista.iterator();
+		
+		String nome;
+		int contador = 0;
+		
+		while(i.hasNext()) {
+			
+			nome = (String) i.next();
+			
+			if (nome.equalsIgnoreCase(nome_p)) {
+				
+				contador++;
+				
+			}
+			
+		}
+		
+		if (contador == 1) {
+			
+			return "O nome está presente na lista";
+			
+		}else if(contador > 1) {
+			
+			return "O nome está presente na lista " + contador + " vezes";
+			
+		}else {
+			
+			return "O nome não está presente na lista.";
+			
+		}
+		
+	}
+
+}
