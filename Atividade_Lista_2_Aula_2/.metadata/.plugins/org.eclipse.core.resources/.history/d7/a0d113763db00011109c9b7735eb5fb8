@@ -1,0 +1,34 @@
+/*Exercício 5 referente a lista da aula 2.*/
+
+package Exercícios;
+
+public class Produto {
+
+	int id;
+	String nome;
+	double preco;
+	
+	public void produto(int id_p, String nome_p, double preco_p) {
+		
+		id = id_p;
+		nome = nome_p;
+		preco = preco_p;
+		
+	}
+	
+	public void aplicarDesconto(double porcentagem) {
+		
+		double valor;
+		valor = preco * porcentagem;
+		preco = preco - valor;
+		
+	}
+	
+	public void exibirDetalhes() {
+		
+		System.out.println("ID do produto: " + id);
+		System.out.println("Nome do produto: " + nome);
+		System.out.printf("Preço do produto: %.2f\n" + preco);
+		
+	}	
+}

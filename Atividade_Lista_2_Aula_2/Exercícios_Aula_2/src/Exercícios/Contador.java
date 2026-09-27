@@ -1,0 +1,25 @@
+/*Crie uma classe Contador que possui:  Um atributo estático totalObjetos para 
+contar quantos objetos foram criados;  Um construtor que incremente esse 
+contador sempre que um novo objeto for instanciado; Um método estático 
+mostrarTotal() que exibe o total de objetos criados. No main, crie alguns objetos e 
+depois exiba o total utilizando o método estático.*/
+
+package Exercícios;
+
+public class Contador {
+
+	static int totalObjetos;
+	
+	public Contador(){
+		
+		totalObjetos++;
+	
+	}
+	
+	public static void mostrarTotal() {
+		
+		System.out.println("Total de contadores criados: " + totalObjetos);
+		
+	}
+	
+}

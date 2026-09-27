@@ -1,0 +1,20 @@
+package Exemplos;
+
+public class ExemploString {
+
+	public static void main(String[] args) {
+		
+		String frase1 = " Muito a aprender ";
+		String frase2 = " Voce ainda tem ";
+		String completa = frase1 + frase2;
+		System.out.println(completa + "!");
+		System.out.println("O caracter da posiçao 2 da frase 1 eh: " + frase1.charAt(2));
+		System.out.println("Frase completa toda em maiuscula: " + frase1.toUpperCase());
+		System.out.println("SubString de 2 a 8: " + completa.subSequence(2, 8));
+		System.out.println("Tirando os espaços antes e depois da frase completa: " + completa.trim());
+		System.out.println("Substituindo \'aprender\' por \'praticar\' na frase completa: " + completa.replace("aprender", "praticar"));
+		
+		
+	}
+	
+}

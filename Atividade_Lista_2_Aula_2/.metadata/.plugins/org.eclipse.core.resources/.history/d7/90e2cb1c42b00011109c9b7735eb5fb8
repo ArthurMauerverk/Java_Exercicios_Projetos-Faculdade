@@ -1,0 +1,47 @@
+package Exercícios;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ContaBancaria_main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<ContaBancaria> lista = new ArrayList<ContaBancaria>();
+		
+		ContaBancaria user = new ContaBancaria();
+		ContaBancaria user1 = new ContaBancaria();
+		ContaBancaria user2 = new ContaBancaria();
+		ContaBancaria user3 = new ContaBancaria();
+		
+		user1.criarConta(1001, "Arthur Mauerverk", 6000000.00);
+		
+		lista.add(user1);
+		
+		user2.criarConta(1002, "Maria Julia", 1500000.00);
+		
+		lista.add(user2);
+		
+		user3.criarConta(1003, "Nathalia Borges", 3500000.00);
+		
+		lista.add(user3);
+		
+		Iterator i = lista.iterator();
+		
+		double valor = 0;
+		
+		while(i.hasNext()) {
+			
+			user = (ContaBancaria) i.next();
+			System.out.println("Número do titular: " + user.numero);
+			System.out.println("Titular: " + user.titular);
+			System.out.printf("Saldo total do titular: %.2f\n", user.saldo);
+			System.out.println("-------------------------------------------------------------");
+			valor += user.saldo;
+			
+		}
+		
+		System.out.printf("Saldo total acumulado no banco: %.2f\n", valor);
+			
+	}
+}

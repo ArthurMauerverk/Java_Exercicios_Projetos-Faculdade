@@ -1,0 +1,18 @@
+ackage Exercícios;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class CadastroPessoa_main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> lista_usuario = new ArrayList<String>();
+		
+		CadastroPessoa objeto1 = new CadastroPessoa();
+		
+		objeto1 = "Arthur";
+		
+	}
+	
+}

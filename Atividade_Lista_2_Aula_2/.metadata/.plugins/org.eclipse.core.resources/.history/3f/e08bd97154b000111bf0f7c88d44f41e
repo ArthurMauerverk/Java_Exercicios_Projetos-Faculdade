@@ -1,0 +1,11 @@
+package Exercícios;
+
+public class CadastroPessoa {
+	
+	public static boolean validarNome(String nome) {
+		
+			
+		
+	}
+
+}
