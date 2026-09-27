@@ -1,0 +1,23 @@
+package Lista_3_Atividade_7;
+
+public class DVDs extends Produto{
+
+	private int duracao; // Representa Minutos.
+	
+	public DVDs() {}
+	
+	public DVDs(String nome, double preco, int duracao) {
+		
+		super(nome, preco);
+		this.duracao = duracao;
+		
+	}
+	
+	@Override
+	public String toString() {
+		
+		return ("DVDs -> Nome: " + getNome() + "; Duração: " + this.duracao + "; " + "Preço: " + getPreco());
+		
+	}
+		
+}

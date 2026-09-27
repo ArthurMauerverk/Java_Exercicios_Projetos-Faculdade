@@ -1,0 +1,60 @@
+package Lista_3_Atividade_7;
+
+public class Produto implements Comparable<Produto>{
+	
+	private String nome;
+	private double preco;
+	private int codigoBarra;
+	
+	public Produto() {}
+	
+	public Produto(String nome,int codigoBarra, double preco) {
+		
+		this.nome = nome;
+		this.preco = preco;
+		this.codigoBarra = codigoBarra;
+		
+	}
+	
+	public String getNome() {
+		
+		return this.nome;
+		
+	}
+	
+	public double getPreco() {
+		
+		return this.preco;
+		
+	}
+	
+	public int getCodigoBarra() {
+		
+		return this.codigoBarra;
+		
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		
+		if (o == null) {
+			return false;
+		}else if (o.getClass() != this.getClass()) {
+			return false;
+		}else if(((Produto) o).getCodigoBarra() != this.getCodigoBarra()) {
+			return false;
+		}else {
+			return true;
+		}
+		
+	}
+	
+	@Override
+	public int compareTo(Produto outroProduto) {
+		
+		return Double.compare(this.preco, outroProduto.getPreco());
+		
+		
+	}
+
+}

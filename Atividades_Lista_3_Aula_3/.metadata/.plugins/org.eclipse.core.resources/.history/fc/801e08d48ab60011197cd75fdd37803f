@@ -1,0 +1,18 @@
+package Lista_3;
+
+public class Gato extends Animal{
+
+	@Override
+	public void emitirSom() {
+		
+		System.out.print("Miau!");		
+	}
+	
+	@Override
+	public void tipoAnimal() {
+		
+		System.out.println("Gato: ");
+		
+	}
+	
+}

@@ -1,0 +1,34 @@
+package Lista_3;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class AnimalMain {
+	
+	public static void main(String[] args) {
+		
+		ArrayList<Animal> listaAnimais = new ArrayList<Animal>();
+		
+		Cachorro dog = new Cachorro();
+		
+		listaAnimais.add(dog);
+		
+		Gato cat = new Gato();
+		
+		listaAnimais.add(cat);
+		
+		Animal animal = new Animal();
+		
+		Iterator i = listaAnimais.iterator();
+		
+		while (i.hasNext()) {
+			
+			animal = (Animal) i.next();
+			
+			animal.tipoAnimal();
+			animal.emitirSom();
+			
+		}
+		
+	}
+	
+}
