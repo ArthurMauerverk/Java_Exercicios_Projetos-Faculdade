@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\arthu\OneDrive\Área de Trabalho\Trabalho 1\Primeiro Trabalho\.metadata\.plugins\org.eclipse.jdt.core
+3181973020.index
+1865797976.index
+988394964.index

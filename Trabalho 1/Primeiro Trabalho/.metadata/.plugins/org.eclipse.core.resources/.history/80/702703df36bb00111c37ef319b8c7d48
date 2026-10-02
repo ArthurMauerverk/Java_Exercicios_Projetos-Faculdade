@@ -1,0 +1,48 @@
+package Loja;
+
+public class Moto extends Veiculo{
+
+	public Moto(String marca, String modelo, int ano) {
+		
+		super(marca, modelo, ano);
+		
+	}
+	
+	@Override
+	public void descricao() {
+		
+		System.out.println("Descrição do veículo:");
+		System.out.println("Veículo: Motocicleta");
+		System.out.println("Marca: " + getMarca());
+		System.out.println("Modelo: " + getModelo());
+		System.out.println("Ano: " + getAno());
+		
+	}
+	
+	@Override
+	public void acelerar() {
+		
+		int novaVelocidade = getVelocidadeAtual() + 35;
+		setVelocidadeAtual(novaVelocidade);
+		System.out.println("A moto acelerou!");
+		System.out.println("Velocidade atual: " + getVelocidadeAtual() + " Km/h");
+		
+	}
+	
+	@Override
+	public void frear() {
+		
+		int novaVelocidade = getVelocidadeAtual() - 25;
+		
+		if (novaVelocidade < 0) {
+			
+			novaVelocidade = 0;
+		}
+		
+		setVelocidadeAtual(novaVelocidade);
+		System.out.println("A moto freou!");
+		System.out.println("Velocidade atual: " + getVelocidadeAtual() + " Km/h");
+		
+	}
+	
+}

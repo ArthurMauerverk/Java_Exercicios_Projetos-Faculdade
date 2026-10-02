@@ -1,0 +1,42 @@
+package Loja;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Veiculo> lista = new ArrayList<Veiculo>();
+		
+		Carro carro = new Carro("Toyota", "Corolla", 2022);
+		
+		lista.add(carro);
+		
+		Moto moto = new Moto("Honda", "CB 500F", 2021);
+		
+		lista.add(moto);
+		
+		Caminhao caminhao = new Caminhao("Volvo", "FH 540", 2023);
+		
+		lista.add(caminhao);
+		
+		Iterator i = lista.iterator(); 
+		
+		Veiculo veiculo;
+		
+		while (i.hasNext()) {
+			
+			veiculo = (Veiculo) i.next();
+			
+			veiculo.descricao();
+			veiculo.acelerar();
+			veiculo.frear();
+			
+			System.out.println("----------------------------------------------------------------");
+			
+		}
+		
+	}
+	
+}
