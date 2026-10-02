@@ -1,0 +1,52 @@
+package Lista_3_Atividade_7;
+
+public class Loja {
+
+	public static void main(String[] args) {
+		
+		Produto[] ListaProdutos = new Produto[5];
+		
+		ListaProdutos[0] = new Livros("O Senhor dos Anéis", "J.R.R. Tolkien", 89.90, 1001);
+		ListaProdutos[1] = new Livros("             1984              ", "George Orwell", 45.00, 1002);
+		ListaProdutos[2] = new CDs("Thriller - Michael Jackson", 29.90, 9, 1003);
+		ListaProdutos[3] = new CDs("Dois - Legião Urbana", 35.50, 12, 1004);
+		ListaProdutos[4] = new DVDs("O Auto da Compadecida", 25.00, 104, 1005);
+		
+		for (int i = 0; i < ListaProdutos.length; i++) {
+			
+			System.out.println(ListaProdutos[i].toString());
+			
+		}
+		
+		System.out.println("================================================================================");
+		
+		Produto produto1 = new Livros("1984", "George Orwell", 45.00, 1002);
+		Produto produto2 = new Livros("1984", "George Orwell", 45.00, 1022);
+		buscaProduto(produto1, ListaProdutos);
+		buscaProduto(produto2, ListaProdutos);
+		
+	}
+	
+	public static void buscaProduto(Produto objeto1, Produto[] vetor) {
+		
+		
+		for (int i = 0; i < vetor.length; i++) {
+			
+			String nome1 = objeto1.getNome().strip();
+			String nome2 = vetor[i].getNome().strip();
+			
+			if ((objeto1.equals(vetor[i]))) {
+				
+				System.out.println("O produto " + vetor[i].getNome() + " foi encontrado na posição " + (i + 1) + " da lista de produtos da loja.");
+				
+			}else if (nome1 == nome2){
+				
+				System.out.println("O produto " + vetor[i].getNome() + " não foi encontrado na lista de produtos da loja.");
+				
+			}
+			
+		}
+		
+	}
+	
+}

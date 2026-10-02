@@ -1,0 +1,64 @@
+package Lista_3_Atividade_7;
+
+public class Loja {
+
+	public static void main(String[] args) {
+		
+		Produto[] ListaProdutos = new Produto[5];
+		
+		ListaProdutos[0] = new Livros("O Senhor dos Anéis", "J.R.R. Tolkien", 89.90, 1001);
+		ListaProdutos[1] = new Livros("1984", "George Orwell", 45.00, 1002);
+		ListaProdutos[2] = new CDs("Thriller - Michael Jackson", 29.90, 9, 1003);
+		ListaProdutos[3] = new CDs("Dois - Legião Urbana", 35.50, 12, 1004);
+		ListaProdutos[4] = new DVDs("O Auto da Compadecida", 25.00, 104, 1005);
+		
+		for (int i = 0; i < ListaProdutos.length; i++) {
+			
+			System.out.println(ListaProdutos[i].toString());
+			
+		}
+		
+		System.out.println("================================================================================");
+		
+		Produto produto1 = new Livros("1984", "George Orwell", 45.00, 1002);
+		Produto produto2 = new Livros("1984", "George Orwell", 45.00, 1022);
+		buscaProduto(produto1, ListaProdutos);
+		buscaProduto(produto2, ListaProdutos);
+		
+		System.out.println("================================================================================");
+
+		java.util.Arrays.sort(ListaProdutos);
+		
+		for (int i = 0; i < ListaProdutos.length; i++) {
+			
+			System.out.println(ListaProdutos[i].toString());
+			
+		}
+		
+		System.out.println("================================================================================");
+		
+	}
+	
+	public static void buscaProduto(Produto objeto1, Produto[] vetor) {
+		
+		boolean encontrou = false;
+		
+		for (int i = 0; i < vetor.length; i++) {
+			
+			if ((objeto1.equals(vetor[i]))) {
+				
+				encontrou = true;
+				
+				System.out.println("Situação da busca do produto: Encontrado.");
+				
+			}
+			
+		}
+		
+		if (encontrou == false) {
+			System.out.println("Situação da busca do produto: Não encontrado.");
+		}
+		
+	}
+	
+}

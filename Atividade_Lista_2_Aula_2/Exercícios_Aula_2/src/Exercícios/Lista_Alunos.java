@@ -1,0 +1,42 @@
+/*Crie uma ArrayList<String> para armazenar nomes de alunos. Adicione pelo menos 5 
+nomes. Use um Iterator para percorrer e imprimir cada nome da lista. Em seguida, 
+remova um nome e exiba novamente a lista atualizada*/
+
+package Exercícios;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Lista_Alunos {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> lista_alunos = new ArrayList<String>();
+		
+		lista_alunos.add("Arthur");
+		lista_alunos.add("João");
+		lista_alunos.add("Maria");
+		lista_alunos.add("Julia");
+		lista_alunos.add("Vitor");
+		
+		Iterator i = lista_alunos.iterator();
+		
+		while(i.hasNext()) {
+			
+			System.out.println("Nome do aluno(a): " + i.next());
+			
+		}
+		
+		lista_alunos.remove("Maria");
+		
+		System.out.println("---------------------------------------------------------");
+		
+		i = lista_alunos.iterator();
+		
+		while(i.hasNext()) {
+			
+			System.out.println("Nome do aluno(a): " + i.next());
+				
+		}		
+	}
+}

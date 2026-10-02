@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\arthu\OneDrive\Área de Trabalho\Nova pasta\Atividades_Lista_3_Aula_3\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+311729742.index
+988394964.index

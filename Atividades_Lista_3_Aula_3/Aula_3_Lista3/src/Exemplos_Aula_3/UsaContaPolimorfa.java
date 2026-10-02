@@ -1,0 +1,42 @@
+package Exemplos_Aula_3;
+import java.util.Scanner;
+
+public class UsaContaPolimorfa {
+	
+	public static void main(String[] args) {
+		
+		Conta c = null;
+		Scanner scan = new Scanner(System.in);
+		int opcao;
+		System.out.println("Qual tipo de conta deseja criar para José?");
+		System.out.println("1 - Conta");
+		System.out.println("2 - Conta Especial");
+		System.out.println("3 - Conta Poupança");
+		opcao = scan.nextInt();
+		switch (opcao) {
+		
+		    case 1:
+		    	
+		    	c = new Conta(1, "José");
+		    	break;
+		    
+		    case 2:
+		    	
+		    	c = new ContaEspecial(2, "José", 100.00);
+		    	break;
+		    	
+		    case 3:
+		    	
+		    	c = new ContaPoupanca(2, "José");
+		    	break;
+		    
+		}
+		Conta y = new ContaEspecial(2, "Julia", 300);
+		System.out.println(c.toString());
+		System.out.println(y.toString());
+		c.imprimirTipoConta();
+		System.out.println(c.equals(y));
+		
+	}
+	
+}

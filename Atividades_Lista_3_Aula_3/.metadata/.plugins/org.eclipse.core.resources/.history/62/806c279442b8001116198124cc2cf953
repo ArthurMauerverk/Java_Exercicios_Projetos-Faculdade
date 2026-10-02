@@ -1,0 +1,99 @@
+package Exemplos_Aula_3;
+
+public class Conta {
+	
+	private int numero;
+	private String nome_titular;
+	protected double saldo;
+	
+	public Conta(int numero, String nome_titular, double saldo) {
+		
+		this.numero = numero;
+		this.nome_titular = nome_titular;
+		this.saldo = saldo;
+		
+	}
+	
+	public Conta(int numero, String nome_titular) {
+		
+		this.numero = numero;
+		this.nome_titular = nome_titular;
+		saldo = 0;
+		
+	}
+	
+	public void setDepositar (double valor) {
+		
+		this.saldo = this.getSaldo() + valor;
+		
+	}
+	
+	public boolean setSacar(double valor) {
+		
+		if(this.getSaldo() >= valor) {
+			
+			this.saldo -= valor;
+			return(true);
+			
+		}else {
+			
+			return(false);
+			
+		}
+		
+	}
+	
+	public void setNomeTitular(String nome_titular) {
+		
+		this.nome_titular = nome_titular;
+		
+	}
+	
+	public double getSaldo() {
+		
+		return this.saldo;
+		
+	}
+	
+	public int getNumero() {
+		
+		return this.numero;
+		
+	}
+	
+	public String getNomeTitular() {
+		
+		return this.nome_titular;
+		
+	}
+	
+	public void imprimirTipoConta() {
+		
+		System.out.println("Conta Comum");
+		
+	}
+	
+	public void imprimirTipoConta(String s) {
+		
+		System.out.println("Conta comum - String recebida: " + s);
+		
+	}
+	
+	@Override
+	public String toString() {
+		
+		return ("Conta: " + this.numero);
+		
+	}
+	
+	/*public static void main(String[] args) {
+		
+		Conta c1 = new Conta(1, "Joao", 500);
+		Conta c2 = new Conta(2, "Hozier");
+		
+		System.out.println(c1.numero + " " + c1.nome_titular + " " + c1.saldo);
+		System.out.println(c2.numero + " " + c2.nome_titular + " " + c2.saldo);
+		
+	}*/
+	
+}

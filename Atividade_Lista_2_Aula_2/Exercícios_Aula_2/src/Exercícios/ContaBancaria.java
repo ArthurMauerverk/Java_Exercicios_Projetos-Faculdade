@@ -1,0 +1,19 @@
+/*Exercício 6 referente a lista da aula 2.*/
+
+package Exercícios;
+
+public class ContaBancaria {
+
+	int numero;
+	String titular;
+	double saldo;
+	
+	public void criarConta(int numero_p, String titular_p, double saldo_p){
+		
+		numero = numero_p;
+		titular = titular_p;
+		saldo = saldo_p;
+		
+	}
+	
+}

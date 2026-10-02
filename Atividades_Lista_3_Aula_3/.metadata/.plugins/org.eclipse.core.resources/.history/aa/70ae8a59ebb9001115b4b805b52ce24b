@@ -1,0 +1,24 @@
+package Lista_3_Atividade_7;
+
+public class Livros extends Produto{
+	
+	private String autor;
+	
+	public Livros() {}
+	
+	public Livros(String nome, String autor, double preco) {
+		
+		super(nome, preco);
+		this.autor = autor;
+		
+	}
+	
+	@Override
+	public String toString() {
+		
+		return ("Livro -> Nome: " + getNome() + "; Autor: " + this.autor + "; Preço: " + getPreco());
+		
+	}
+	
+
+}

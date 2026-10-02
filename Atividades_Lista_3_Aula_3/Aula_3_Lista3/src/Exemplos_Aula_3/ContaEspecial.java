@@ -1,0 +1,49 @@
+package Exemplos_Aula_3;
+
+public class ContaEspecial extends Conta{
+
+	private double limite;
+	
+	public ContaEspecial(int numero, String numero_titular, double limite) {
+		
+		super(numero, numero_titular);
+		this.limite = limite;
+		
+	}
+	
+	public double getLimite() {
+		
+			return this.limite;
+		
+	}
+	
+	public void setLimite(double limite) {
+		
+		this.limite = limite;
+		
+	}
+	
+	@Override
+	public void imprimirTipoConta() {
+		
+		System.out.println("Conta Especial");
+		
+	}
+	
+	@Override
+	public boolean setSacar(double valor) {
+		
+		if (valor <= this.limite + this.saldo) {
+			
+			this.saldo -= valor;
+			return true;
+			
+		}else {
+			
+			return false;
+			
+		}
+		
+	} 
+	
+}

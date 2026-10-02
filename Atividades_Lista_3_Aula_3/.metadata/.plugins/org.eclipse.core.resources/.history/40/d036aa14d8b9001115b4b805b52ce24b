@@ -1,0 +1,50 @@
+package Lista_3;
+
+public class ContaBancaria extends Object{
+	
+	private int numero;
+	
+	public ContaBancaria(int numero) {
+		
+		this.numero = numero;
+	}
+	
+	public int getNumero() {
+		
+		return this.numero;
+		
+	}
+	
+	@Override
+	public String toString() {
+		
+		return ("Conta: " + this.numero);
+		
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		
+		if (o == null) {
+			return false;
+		} else if (o.getClass() != this.getClass()) {
+			return false;
+		} else if (((ContaBancaria) o).getNumero() != this.getNumero()) {
+			return false;
+		}else {
+			return true;
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		ContaBancaria x = new ContaBancaria(3);
+		ContaBancaria y = new ContaBancaria(3);
+		System.out.println(x.equals(y));
+		System.out.println(x.toString());
+		System.out.println(y.toString());
+		
+	}
+
+}
